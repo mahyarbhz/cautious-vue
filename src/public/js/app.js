@@ -1869,7 +1869,8 @@ __webpack_require__.r(__webpack_exports__);
 
       this.errors = {};
       axios.post('/', this.fields).then(function (response) {
-        alert('Message sent!');
+        alert("Submitted successfully, reload the page. :)");
+        console.log(response);
       })["catch"](function (error) {
         if (error.response.status === 422) {
           _this.errors = error.response.data.errors || {};

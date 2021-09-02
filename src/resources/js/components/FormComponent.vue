@@ -21,7 +21,8 @@ export default {
         submit() {
             this.errors = {};
             axios.post('/', this.fields).then(response => {
-                alert('Message sent!');
+                alert("Submitted successfully, reload the page. :)");
+                console.log(response);
             }).catch(error => {
                 if (error.response.status === 422) {
                     this.errors = error.response.data.errors || {};

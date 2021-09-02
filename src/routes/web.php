@@ -26,5 +26,6 @@ Route::post('/', function (Request $request) {
         'description' => $request->description
     ]);
     $products = Product::all();
-    return view('home', ['products' => $products]);
+    return response()
+        ->json(['data' => $products]);
 })->middleware('throttle:5');
