@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $products = \App\Models\Product::all();
+    $products = Product::all();
     return view('home', ['products' => $products]);
 })->name('home');
+
+Route::post('/', function (Request $request) {
+    $product = Product::create([
+        'name' => $request->name,
+        'description' => $request->description
+    ]);
+    $products = Product::all();
+    return view('home', ['products' => $products]);
+})->middleware('throttle:5');

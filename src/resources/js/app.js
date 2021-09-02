@@ -1,11 +1,12 @@
 require('./bootstrap');
 import Vue from 'vue'
-
-import Products from './components/ProductsComponent.vue'
+import ProductsList from './components/ProductsComponent.vue'
+import ProductsForm from './components/FormComponent.vue'
 
 const app = new Vue({
     el: '#app',
     components: {
-        "products": Products
+        "products-list": ProductsList,
+        "products-form": ProductsForm
     }
 })
