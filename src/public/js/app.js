@@ -1869,7 +1869,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.errors = {};
       axios.post('/', this.fields).then(function (response) {
-        alert("Submitted successfully, reload the page. :)");
+        alert("Submitted successfully, update the list with that button. :)");
         console.log(response);
       })["catch"](function (error) {
         if (error.response.status === 422) {
@@ -1901,9 +1901,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ProductsList",
-  props: ['products']
+  data: function data() {
+    return {
+      products: ''
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/products').then(function (response) {
+      _this.products = response.data;
+    });
+  },
+  methods: {
+    update: function update() {
+      var _this2 = this;
+
+      axios.get('/products').then(function (response) {
+        _this2.products = response.data;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -19633,6 +19654,18 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "ProductsList" } }, [
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            return _vm.update()
+          }
+        }
+      },
+      [_vm._v("Update list")]
+    ),
+    _vm._v(" "),
     _c(
       "ul",
       _vm._l(_vm.products, function(item) {

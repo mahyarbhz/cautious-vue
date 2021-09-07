@@ -21,7 +21,7 @@ export default {
         submit() {
             this.errors = {};
             axios.post('/', this.fields).then(response => {
-                alert("Submitted successfully, reload the page. :)");
+                alert("Submitted successfully, update the list with that button. :)");
                 console.log(response);
             }).catch(error => {
                 if (error.response.status === 422) {

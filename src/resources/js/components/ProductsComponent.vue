@@ -1,5 +1,6 @@
 <template>
     <div id="ProductsList">
+        <button @click="update()">Update list</button>
         <ul>
             <li v-for="item in products">{{ item.name }} || {{ item.description }}</li>
         </ul>
@@ -9,6 +10,22 @@
 <script>
     export default {
         name: "ProductsList",
-        props: ['products'],
+        data() {
+            return {
+                products: ''
+            }
+        },
+        created() {
+            axios.get('/products').then(response => {
+                this.products = response.data;
+            });
+        },
+        methods: {
+            update() {
+                axios.get('/products').then(response => {
+                    this.products = response.data;
+                });
+            }
+        },
     };
 </script>

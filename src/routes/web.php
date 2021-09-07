@@ -29,3 +29,9 @@ Route::post('/', function (Request $request) {
     return response()
         ->json(['data' => $products]);
 })->middleware('throttle:5');
+
+Route::get('/products', function () {
+    $products = Product::all();
+    return response()
+        ->json($products);
+});

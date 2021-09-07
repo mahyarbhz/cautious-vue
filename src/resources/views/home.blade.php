@@ -11,7 +11,8 @@
 <body>
         <div id="app">
             <products-form></products-form>
-            <products-list :products="{{ json_encode($products) }}"></products-list>
+            <br>
+            <products-list></products-list>
         </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
