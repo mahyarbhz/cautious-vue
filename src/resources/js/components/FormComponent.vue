@@ -5,6 +5,9 @@
             <textarea name="description" id="" cols="30" rows="10" placeholder="Description" v-model="fields.description"></textarea>
             <input type="submit" value="Submit">
         </form>
+        <ul>
+            <li v-for="error in errors">{{ error }}</li>
+        </ul>
     </div>
 </template>
 
@@ -21,10 +24,10 @@ export default {
         submit() {
             this.errors = {};
             axios.post('/', this.fields).then(response => {
-                alert("Submitted successfully, update the list with that button. :)");
-                console.log(response);
+                alert(response.data.message);
+                this.fields = {};
             }).catch(error => {
-                if (error.response.status === 422) {
+                if (error.response.status) {
                     this.errors = error.response.data.errors || {};
                 }
             });

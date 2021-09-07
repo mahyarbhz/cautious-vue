@@ -1855,6 +1855,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ProductsForm",
   data: function data() {
@@ -1869,10 +1872,10 @@ __webpack_require__.r(__webpack_exports__);
 
       this.errors = {};
       axios.post('/', this.fields).then(function (response) {
-        alert("Submitted successfully, update the list with that button. :)");
-        console.log(response);
+        alert(response.data.message);
+        _this.fields = {};
       })["catch"](function (error) {
-        if (error.response.status === 422) {
+        if (error.response.status) {
           _this.errors = error.response.data.errors || {};
         }
       });
@@ -1906,7 +1909,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "ProductsList",
   data: function data() {
     return {
-      products: ''
+      products: {}
     };
   },
   created: function created() {
@@ -19627,6 +19630,14 @@ var render = function() {
         _vm._v(" "),
         _c("input", { attrs: { type: "submit", value: "Submit" } })
       ]
+    ),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.errors, function(error) {
+        return _c("li", [_vm._v(_vm._s(error))])
+      }),
+      0
     )
   ])
 }

@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Models\Product;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,23 +17,11 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [function () {
     $products = Product::all();
     return view('home', ['products' => $products]);
-})->name('home');
+}])->name('home');
 
-Route::post('/', function (Request $request) {
-    $product = Product::create([
-        'name' => $request->name,
-        'description' => $request->description
-    ]);
-    $products = Product::all();
-    return response()
-        ->json(['data' => $products]);
-})->middleware('throttle:5');
+Route::post('/', [ProductController::class, 'store'])->middleware('throttle:5');
 
-Route::get('/products', function () {
-    $products = Product::all();
-    return response()
-        ->json($products);
-});
+Route::get('/products', [ProductController::class, 'index']);

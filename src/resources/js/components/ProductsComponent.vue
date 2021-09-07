@@ -12,7 +12,7 @@
         name: "ProductsList",
         data() {
             return {
-                products: ''
+                products: {}
             }
         },
         created() {
