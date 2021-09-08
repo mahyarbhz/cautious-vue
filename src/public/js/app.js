@@ -2076,7 +2076,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.spinner[data-v-5ecce49e] {\n    width: 40px;\n    height: 35px;\n    margin-left: 5px;\n    text-align: center;\n    font-size: 10px;\n}\n.spinner > div[data-v-5ecce49e] {\n    background-color: #1D4ED8;\n    height: 100%;\n    width: 5px;\n    display: inline-block;\n\n    -webkit-animation: rectsAnimation-data-v-5ecce49e 1.2s infinite ease-in-out;\n    animation: rectsAnimation-data-v-5ecce49e 1.2s infinite ease-in-out;\n}\n.spinner .rect2[data-v-5ecce49e] {\n    -webkit-animation-delay: -1.1s;\n    animation-delay: -1.1s;\n}\n.spinner .rect3[data-v-5ecce49e] {\n    -webkit-animation-delay: -1.0s;\n    animation-delay: -1.0s;\n}\n.spinner .rect4[data-v-5ecce49e] {\n    -webkit-animation-delay: -0.9s;\n    animation-delay: -0.9s;\n}\n.spinner .rect5[data-v-5ecce49e] {\n    -webkit-animation-delay: -0.8s;\n    animation-delay: -0.8s;\n}\n@-webkit-keyframes rectsAnimation-data-v-5ecce49e {\n0%, 40%, 100% { -webkit-transform: scaleY(0.4)\n}\n20% { -webkit-transform: scaleY(1.0)\n}\n}\n@keyframes rectsAnimation-data-v-5ecce49e {\n0%, 40%, 100% {\n        transform: scaleY(0.4);\n        -webkit-transform: scaleY(0.4);\n}\n20% {\n           transform: scaleY(1.0);\n           -webkit-transform: scaleY(1.0);\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.spinner[data-v-5ecce49e] {\n    width: 40px;\n    height: 35px;\n    margin-left: 5px;\n    text-align: center;\n    font-size: 10px;\n}\n.spinner > div[data-v-5ecce49e] {\n    background-color: #2563EB;\n    height: 100%;\n    width: 5px;\n    display: inline-block;\n\n    -webkit-animation: rectsAnimation-data-v-5ecce49e 1.2s infinite ease-in-out;\n    animation: rectsAnimation-data-v-5ecce49e 1.2s infinite ease-in-out;\n}\n.spinner .rect2[data-v-5ecce49e] {\n    -webkit-animation-delay: -1.1s;\n    animation-delay: -1.1s;\n}\n.spinner .rect3[data-v-5ecce49e] {\n    -webkit-animation-delay: -1.0s;\n    animation-delay: -1.0s;\n}\n.spinner .rect4[data-v-5ecce49e] {\n    -webkit-animation-delay: -0.9s;\n    animation-delay: -0.9s;\n}\n.spinner .rect5[data-v-5ecce49e] {\n    -webkit-animation-delay: -0.8s;\n    animation-delay: -0.8s;\n}\n@-webkit-keyframes rectsAnimation-data-v-5ecce49e {\n0%, 40%, 100% { -webkit-transform: scaleY(0.4)\n}\n20% { -webkit-transform: scaleY(1.0)\n}\n}\n@keyframes rectsAnimation-data-v-5ecce49e {\n0%, 40%, 100% {\n        transform: scaleY(0.4);\n        -webkit-transform: scaleY(0.4);\n}\n20% {\n           transform: scaleY(1.0);\n           -webkit-transform: scaleY(1.0);\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20159,7 +20159,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "cursor-pointer py-2 px-4 block mt-6 bg-blue-900 transition duration-250 text-white font-bold w-full text-center rounded",
+                      "cursor-pointer py-2 px-4 block mt-6 bg-gray-900 transition duration-250 text-white font-bold w-full text-center rounded",
                     attrs: { disabled: "" }
                   },
                   [_vm._v("Submit")]
@@ -20168,7 +20168,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "cursor-pointer py-2 px-4 block mt-6 bg-blue-700 hover:bg-blue-800 transition duration-250 text-white font-bold w-full text-center rounded"
+                      "cursor-pointer py-2 px-4 block mt-6 bg-blue-600 hover:bg-blue-700 transition duration-250 text-white font-bold w-full text-center rounded"
                   },
                   [_vm._v("Submit")]
                 )
@@ -20218,7 +20218,7 @@ var render = function() {
           "button",
           {
             staticClass:
-              "bg-blue-700 transition duration-250 hover:bg-blue-800 text-white py-2 px-4 rounded-md shadow-md focus:outline-none",
+              "bg-blue-600 hover:bg-blue-700 transition duration-250 text-white py-2 px-4 rounded-md shadow-md focus:outline-none",
             on: {
               click: function($event) {
                 return _vm.update(_vm.selected)
@@ -20246,7 +20246,7 @@ var render = function() {
       _c(
         "div",
         {
-          staticClass: "bg-white shadow-md rounded my-6",
+          staticClass: "bg-white shadow-xl rounded-md my-6",
           staticStyle: { display: "grid" }
         },
         [
@@ -20261,6 +20261,7 @@ var render = function() {
                   expression: "selected"
                 }
               ],
+              staticClass: "rounded-md",
               staticStyle: { "justify-self": "end" },
               attrs: { name: "order", id: "order" },
               on: {

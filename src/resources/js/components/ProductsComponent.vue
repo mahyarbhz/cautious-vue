@@ -2,7 +2,7 @@
     <div id="ProductsList" class="pb-8">
         <div class="w-2/3 mx-auto">
             <div class="flex">
-                <button @click="update(selected)" class="bg-blue-700 transition duration-250 hover:bg-blue-800 text-white py-2 px-4 rounded-md shadow-md focus:outline-none">Update list</button>
+                <button @click="update(selected)" class="bg-blue-600 hover:bg-blue-700 transition duration-250 text-white py-2 px-4 rounded-md shadow-md focus:outline-none">Update list</button>
                 <div class="spinner" v-if="loading">
                     <div class="rect1"></div>
                     <div class="rect2"></div>
@@ -11,8 +11,8 @@
                     <div class="rect5"></div>
                 </div>
             </div>
-            <div class="bg-white shadow-md rounded my-6"  style="display: grid;">
-                <select name="order" id="order" v-model="selected" @change="update(selected)" class="" style="justify-self: end">
+            <div class="bg-white shadow-xl rounded-md my-6"  style="display: grid;">
+                <select name="order" id="order" v-model="selected" @change="update(selected)" class="rounded-md" style="justify-self: end">
                     <option value="" disabled selected>Please select one</option>
                     <option value="0">The newest first</option>
                     <option value="1">The oldest first</option>
@@ -89,7 +89,7 @@
     }
 
     .spinner > div {
-        background-color: #1D4ED8;
+        background-color: #2563EB;
         height: 100%;
         width: 5px;
         display: inline-block;

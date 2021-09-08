@@ -12,8 +12,8 @@
                         <label for="email" class="block text-gray-800 font-bold">Description:</label>
                         <textarea name="description" id="email" cols="26" placeholder="Description" v-model="fields.description" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"></textarea>
                     </div>
-                    <button v-if="submitting" class="cursor-pointer py-2 px-4 block mt-6 bg-blue-900 transition duration-250 text-white font-bold w-full text-center rounded" disabled>Submit</button>
-                    <button v-else class="cursor-pointer py-2 px-4 block mt-6 bg-blue-700 hover:bg-blue-800 transition duration-250 text-white font-bold w-full text-center rounded">Submit</button>
+                    <button v-if="submitting" class="cursor-pointer py-2 px-4 block mt-6 bg-gray-900 transition duration-250 text-white font-bold w-full text-center rounded" disabled>Submit</button>
+                    <button v-else class="cursor-pointer py-2 px-4 block mt-6 bg-blue-600 hover:bg-blue-700 transition duration-250 text-white font-bold w-full text-center rounded">Submit</button>
                 </form>
             </div>
         </div>
