@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-        <div id="app" class="min-h-screen bg-blue-200">
+        <div id="app" class="min-h-screen bg-gray-100">
             <products-form></products-form>
             <br>
             <products-list></products-list>
