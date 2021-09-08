@@ -12,7 +12,7 @@
                         <label for="email" class="block text-gray-800 font-bold">Description:</label>
                         <textarea name="description" id="email" cols="26" placeholder="Description" v-model="fields.description" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600"></textarea>
                     </div>
-                    <button class="cursor-pointer py-2 px-4 block mt-6 bg-blue-700 transition duration-250 hover:bg-blue-800 text-white font-bold w-full text-center rounded">Login</button>
+                    <button class="cursor-pointer py-2 px-4 block mt-6 bg-blue-700 transition duration-250 hover:bg-blue-800 text-white font-bold w-full text-center rounded">Submit</button>
                 </form>
             </div>
         </div>

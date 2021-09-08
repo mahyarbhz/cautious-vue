@@ -19698,7 +19698,7 @@ var render = function() {
                 staticClass:
                   "cursor-pointer py-2 px-4 block mt-6 bg-blue-700 transition duration-250 hover:bg-blue-800 text-white font-bold w-full text-center rounded"
               },
-              [_vm._v("Login")]
+              [_vm._v("Submit")]
             )
           ]
         )
