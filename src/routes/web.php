@@ -25,3 +25,4 @@ Route::get('/', [function () {
 Route::post('/', [ProductController::class, 'store'])->middleware('throttle:5');
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/productsRev', [ProductController::class, 'indexReverse']);

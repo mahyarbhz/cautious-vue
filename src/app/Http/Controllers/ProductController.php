@@ -20,6 +20,18 @@ class ProductController extends Controller
     }
 
     /**
+     * Display a listing of the resource in reverse.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function indexReverse(): \Illuminate\Http\JsonResponse
+    {
+        $products = Product::orderBy('created_at', 'asc')->get();
+        return response()
+            ->json($products);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
