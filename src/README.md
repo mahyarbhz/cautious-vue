@@ -6,7 +6,7 @@
 
 ```$ copy .env.example .env```
 
-Then configure your enviroments.
+*Then configure your enviroments.*
 
 ### Install all dependencies using Composer
 
